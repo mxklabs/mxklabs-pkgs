@@ -8,13 +8,26 @@ A nix channel for building mxklabs projects.
 
 To add the channel to your set-up:
 
-```sh
+```
 nix-channel --add https://github.com/mxklabs/mxklabs-pkgs/archive/master.tar.gz mxklabs
 nix-channel --update
 ```
 
 To install a package:
 
-```sh
-nix-build 'mxklabs' -A <package_name>
 ```
+nix-build '<mxklabs>' -A firefox
+```
+
+## Troubleshooting
+
+If you get an error saying 
+```
+error: file 'mxklabs' was not found in the Nix search path (add it using $NIX_PATH or -I)
+```
+
+Try changing your `NIX_PATH`: 
+```
+export NIX_PATH=$NIX_PATH:$HOME/.nix-defexpr/channels
+```
+**NOTE**: This is because of [this](https://github.com/NixOS/nix/issues/2033) issue.
