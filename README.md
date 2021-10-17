@@ -16,7 +16,7 @@ nix-channel --update
 To install a package:
 
 ```
-nix-build '<mxklabs>' -A firefox
+nix-build '<mxklabs>' -A mxklabs-example-cpp-app
 ```
 
 ## Troubleshooting
