@@ -9,6 +9,7 @@ final: prev:
 
     nativeBuildInputs = [
       final.cmake
+      final.git
     ];
 
     buildInputs = [
@@ -25,6 +26,7 @@ final: prev:
 
     nativeBuildInputs = [
       final.cmake
+      final.git
     ];
   };
 }
